@@ -1,0 +1,63 @@
+<div class="page-header">
+    <h1 id="cabecera">Admin</h1>
+    <hr>
+    <h2>Lista de Asignaturas</h2>
+
+    <div class="text-center">
+        <h1>Total Registros: <span class="label label-danger">{{asignaturas.length}}</span></h1>
+    </div>
+</div>
+    <div style="position: relative; display: inline-block; float: left;">
+        <a type="button" class="btn btn-warning" ui-sref="addAsignatura">
+            <i class="glyphicon"></i>&nbsp;&nbsp;Crear Asignatura
+        </a>
+        <a type="button" class="btn btn-warning" ui-sref="addEstudiante">
+            <i class="glyphicon"></i>&nbsp;&nbsp;Crear Estudiante
+        </a>
+    </div>
+    <div style="position: relative; display: inline-block; float: right;">
+        <a type="button" class="btn btn-info" ui-sref="estudiantes">
+            <i class="glyphicon"></i>&nbsp;&nbsp;Ver Estudiantes
+        </a>
+    </div>
+</div>
+<br>
+<br>
+<br>
+<div>
+    <table class="table table-hover">
+
+        <th>ID Asignatura</th>
+
+        <th>Asignaturas</th>
+
+        <th>Número de alumnos</th>
+
+        <th>Fecha de creación</th>
+        
+        <tr ng-repeat="asignatura in asignaturas">
+            <td>{{asignatura._id}}</td>
+            <td>{{asignatura.nombre}}</td>
+            <td>{{asignatura.estudiantes.length}}</td>
+            <td>{{asignatura.created | date:'mediumDate'}}</td>
+
+            <td>
+                <div class="table-actions">
+                    <a class="btn btn-success">
+                        <span class="glyphicon glyphicon-edit" title="Editar" ng-click="procesaObjeto(asignatura)" aria-hidden="true"></span>
+                    </a>
+                    <a class="btn btn-danger">
+                        <span class="glyphicon glyphicon-trash"  ng-click="eliminar(asignatura)" aria-hidden="true"></span>
+                    </a>
+                    <a class="btn btn-primary">
+                        <span class="glyphicon glyphicon-user" ng-click="procesaObjeto(asignatura)" aria-hidden="true"></span>
+                    </a>
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>
+<div class="alert alert-warning text-center" data-ng-hide="asignaturas.length">
+    No existen asignaturas ahora. Por qué no <a ui-sref="addAsignatura">creas una</a>?
+</div>
+

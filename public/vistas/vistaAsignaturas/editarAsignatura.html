@@ -1,0 +1,26 @@
+
+<div id="add" class="col-md-6 col-md-offset-3">
+<h2>Añadir Estudiante</h2>
+    <form>
+        <h3>
+            <strong style="color: brown">Asignatura:</strong>&nbsp;{{asignatura.nombre}}
+        </h3>
+        <div class="has-feedback">
+            <input type="text" class="form-control" placeholder="Nombre" ng-model="asignatura.nombre" value="{{asignatura.nombre}}"> </input>
+            <span class="glyphicon glyphicon-user form-control-feedback"></span>
+        </div><br>
+        <div class="has-feedback">
+            <input type="text" class="form-control" placeholder="Estudiantes" ng-model="estudiante.nombre"> </input>
+            <span class="glyphicon glyphicon-tasks form-control-feedback"></span>
+        </div><br><br>
+        <div class="text-center editBtn">
+            <button class="btn btn-success" ng-click="actualizar()">Actualizar</button>
+            <button class="btn btn-primary" ng-click="addEstudianteAsignatura()">Actualizar</button>
+            <button class="btn btn-danger" ng-click="eliminar()">Eliminar</button>
+            <button class="btn btn-warning" ui-sref="asignaturas">Volver</button>
+        </div>
+    </form>
+</div>
+<!-- <div>
+    <a ui-sref="alta">Regresar</a>
+</div> -->

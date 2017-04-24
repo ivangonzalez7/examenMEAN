@@ -1,0 +1,42 @@
+
+<!-- Created by Raul Lorenzo on 24/03/2016. -->
+<div id="add" class="col-md-6 col-md-offset-3">
+    <form>
+        <h3>Nuevo Estudiante:</h3>
+        <div>
+            <div class="has-feedback">
+                <input type="text" class="form-control" placeholder="Nombre" ng-model="estudiante.nombre"> </input>
+                <span class="glyphicon glyphicon-tasks form-control-feedback"></span>
+            </div><br/>
+            <div class="has-feedback">
+                <input type="text" class="form-control" placeholder="Dirección" ng-model="estudiante.direccion"> </input>
+                <span class="glyphicon glyphicon-user form-control-feedback"></span>
+            </div><br/>
+            <div class="has-feedback">
+                <input type="text" class="form-control" placeholder="Teléfono Casa" ng-model="estudiante.telefonos[0].casa"> </input>
+                <span class="glyphicon glyphicon-user form-control-feedback"></span>
+            </div><br/>
+            <div class="has-feedback">
+                <input type="text" class="form-control" placeholder="Teléfono Trabajo" ng-model="estudiante.telefonos[1].trabajo"> </input>
+                <span class="glyphicon glyphicon-user form-control-feedback"></span>
+            </div><br/>
+        </div>
+        <div>
+        </div>
+        <a type="submit" class="btn btn-success" ng-click="agregar()">Agregar</a>
+        <a style="float: right;" class="btn btn-warning" ui-sref='estudiantes'>Volver</a>
+        <br/><br/>
+    </form>
+    <div class="panel-body">
+        <p>
+            <strong>Nombre: </strong>{{ estudiante.nombre }}<br/><hr>
+            <strong>Dirección: </strong>{{ estudiante.direccion }}<br/><hr>
+            <strong>Teléfono Casa: </strong>{{ estudiante.telefonos[0].casa }}<br/><hr>
+            <strong>Teléfono Trabajo: </strong>{{ estudiante.telefonos[1].trabajo }}<br/><hr>
+        </p>
+    </div>
+</div>
+<!-- <div>
+    <a ui-sref="alta">Regresar</a>
+</div> -->
+

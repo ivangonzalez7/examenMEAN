@@ -1,0 +1,38 @@
+
+
+<div id="add" class="col-md-6 col-md-offset-3">
+<h2>Estudiante</h2>
+    <form>
+        <h3>
+            <strong style="color: brown">Estudiante:</strong>&nbsp;{{estudiante.nombre}}
+        </h3>
+        <div class="has-feedback">
+            <input type="text" class="form-control" placeholder="Nombre" ng-model="estudiante._id" value="{{estudiante._id}}"> </input>
+            <span class="glyphicon glyphicon-user form-control-feedback"></span>
+        </div><br>
+        <div class="has-feedback">
+            <input type="text" class="form-control" placeholder="Nombre" ng-model="estudiante.nombre" value="{{estudiante.nombre}}"> </input>
+            <span class="glyphicon glyphicon-user form-control-feedback"></span>
+        </div><br>
+        <div class="has-feedback">
+            <input type="text" class="form-control" placeholder="Estudiantes" ng-model="estudiante.direccion" value="{{estudiante.direccion}}"> </input>
+            <span class="glyphicon glyphicon-tasks form-control-feedback"></span>
+        </div><br>
+<!--         <div class="has-feedback">
+            <input type="text" class="form-control" placeholder="Estudiantes" ng-model="estudiante.telefono[0].casa" value="{{estudiante.telefono[0].casa}}"> </input>
+            <span class="glyphicon glyphicon-tasks form-control-feedback"></span>
+        </div><br>
+        <div class="has-feedback">
+            <input type="text" class="form-control" placeholder="Estudiantes" ng-model="estudiante.telefono[1].trabajo" value="{{estudiante.telefono[1].trabajo}}"> </input>
+            <span class="glyphicon glyphicon-tasks form-control-feedback"></span>
+        </div><br><br> -->
+        <div class="text-center editBtn">
+            <button class="btn btn-success" ng-click="actualizar()">Actualizar</button>
+            <button class="btn btn-danger" ng-click="eliminar()">Eliminar</button>
+            <button class="btn btn-warning" ui-sref="estudiantes">Volver</button>
+        </div>
+    </form>
+</div>
+<!-- <div>
+    <a ui-sref="alta">Regresar</a>
+</div> -->
